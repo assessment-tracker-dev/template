@@ -25,6 +25,11 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
     const Assessment_Name = process.env.ASSESSMENT_NAME;
     const bucket = 'assessment-tracker';
     const filePath = Assessment_Name.concat('.js');
+    console.log('Assessment name:', Assessment_Name);
+    console.log('Downloading from bucket:', bucket);
+    console.log('File path:', filePath);
+
+
    
 
     const { data: fileData, error: downloadError } = await supabase
